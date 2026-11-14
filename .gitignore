@@ -1,0 +1,39 @@
+# Virtual environments
+.venv*/
+venv/
+env/*/
+!env/*.txt
+!env/*.json
+
+# Python caches and builds
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Method scratch / search directories and checkpoints
+runs/tmp/
+scratch/
+**/aifeynman_work/
+*.ckpt
+*.pt
+
+# Large logs and media (go to GitHub release assets instead)
+*.log
+*.mp4
+*.mov
+*.webm
+results/raw/
+
+# Secrets
+.env
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
