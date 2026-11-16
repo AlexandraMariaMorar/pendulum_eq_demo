@@ -20,7 +20,8 @@ initial_states: #where each simulates swing starts
   train: [[-2.0, 0.0], [-1.2, 0.5], [-0.6, -0.8], [0.6, 0.8], [1.2, -0.5], [2.0, 0.0]] # each pair is [theta,v] , the starting angle in radians and the starting angular speed ; ex for the first one pulled back about 115 degrees to one side and released from rest
   validation: [[-1.6, 0.3], [1.0, 0.4]]
   test: [[-1.8, -0.2], [-0.9, 0.6], [0.9, -0.6], [1.8, 0.2]] #kept hidden until the end for the final score ; can the learned equation predict swings it never saw?
-  pilot_rollout: [[-1.4, 0.2], [1.4, -0.2]]
+  # Two plan states plus two extra, so the pilot file has the same shape as test.npz
+  pilot_rollout: [[-1.4, 0.2], [1.4, -0.2], [-0.7, -0.5], [0.7, 0.5]]
  #Why these values? 
  #They spread across left and right swings (negative and positive angles)
  #small and large amplitudes, and both directions of motion
