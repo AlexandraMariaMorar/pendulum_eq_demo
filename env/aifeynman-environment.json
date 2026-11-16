@@ -1,6 +1,6 @@
 {
   "method": "aifeynman",
-  "package": "aifeynman 2.0.7 (built from source)",
+  "package": "aifeynman 2.0.7 (built from source) + 1 local patch",
   "source": "https://github.com/SJ001/AI-Feynman",
   "commit": "a05bc4a5be23d6eb3e1d0b2f7eb1ab5b78a920ad",
   "python": "3.9.6",
@@ -20,5 +20,13 @@
     "numpy<1.26 and setuptools<60 required: setup.py uses numpy.distutils",
     "installed with --no-deps --no-build-isolation; dependency 'sklearn' replaced by scikit-learn; torchvision not imported by the code",
     "Fortran brute-force executables (feynman_sr*) must be on PATH: put .venv-aifeynman/bin first"
+  ],
+  "local_patches": [
+    {
+      "file": "env/aifeynman-local.patch",
+      "change": "S_NN_train.py line 119: range(epochs) -> range(int(epochs))",
+      "reason": "Python 3 bug: run_AI_all passes NN_epochs/2 (a float) when retraining a pretrained NN, so range() raises TypeError and the run ends without a solution file",
+      "effect_on_method": "none: the loop runs the intended number of epochs"
+    }
   ]
 }
