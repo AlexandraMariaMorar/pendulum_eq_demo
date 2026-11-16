@@ -1,0 +1,120 @@
+{
+  "config_hash": "cf6e01f7e3363b223420d2316fb4e5c3fa1cbd38516339f63d54939af219c654",
+  "scale_s": 2.100037691603694,
+  "test_hash": "51f3439fbdaf2998527c2a07168194403a041aea58890714ecf5a9004b5b2141",
+  "pilot_rollout_hash": "e970d1e06afcab4502c88b7ccacebb3a76681a80bfbeeb5a0fc31f08db4fcaac",
+  "datasets": {
+    "benchmark/c00/seed101": {
+      "train": "92c74b2d46a557a2e13b9bcd7590d0f5fb12364df961b2d1640a7de1952954da",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c00/seed102": {
+      "train": "3a4622a85903d7e6240eb0bfd8a8dc163f4182b69ad5ec9f04b3f18144d50af8",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c00/seed103": {
+      "train": "73ff8addfd04f3ac264943e75bc2ad49c31ebdcfea0c6b18084608dce43955ab",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c01/seed101": {
+      "train": "e0cfeb53470dde015613750339be2402ff5b947c78d8436521fd604821e02310",
+      "validation": "c83627d0ba6675cbd388f5516edf9d048ca3abe795514b6241007dfbcb0f5cfd"
+    },
+    "benchmark/c01/seed102": {
+      "train": "d09d6a039796c53e9d3d010edc90b70d8c626a85aa03f07ce9cd9d36279806fc",
+      "validation": "4952d325be218a78e7b97d69706a8e4ae300b8066fc080620e6722e1191ce6ff"
+    },
+    "benchmark/c01/seed103": {
+      "train": "b7b844ae1e7e050ae72ca9c2da08eac163a07e8aa21ba7742388fc55d837d5e1",
+      "validation": "46474d5907df86e246be785258bc3764e9e46688d1ef7c740896623c7beefb42"
+    },
+    "benchmark/c02/seed101": {
+      "train": "1d00e83a46bc78f89f06b058b650bbf61e5f72beb825b4413d7cf12ee59b833c",
+      "validation": "9d6a12897cf6e9aec43a68d2059b73bbd2713306b1adb8bb08a8d465a99bfbea"
+    },
+    "benchmark/c02/seed102": {
+      "train": "1fe30e23c895bc6fedbba04acf2854028f8da60c2c4f74a51f2e1f1e759208e3",
+      "validation": "9624463d0896366e01e86829d29ce2a6f9aed1252e0d443388739f463d30f981"
+    },
+    "benchmark/c02/seed103": {
+      "train": "20d765e31e21e05e095b94ea7eff71a395fb417deb37973e998d13f5055b5674",
+      "validation": "73f7e578b1b6650641281d087c4a649d57a76982ca1ee19f5343b24e29929ab1"
+    },
+    "benchmark/c03/seed101": {
+      "train": "bc4b5ea391eac02b7f35603655589499f1b9272162459e006324cf6f82764d8c",
+      "validation": "96fa147ec981445833ac02200967751ac349c9b5c6e4267d5f13f8f8d49b741e"
+    },
+    "benchmark/c03/seed102": {
+      "train": "471fc9128c11ee0adbcf62ce11ded5550cfdad9df72a8b313efda0e502877384",
+      "validation": "79812b334172dc295f1af3860c8612dcc796b4080cd0a13e8064225d7a16a987"
+    },
+    "benchmark/c03/seed103": {
+      "train": "8b52c3304d11fafc49f1e5b5731b4fbce5d82c2844ae0e5e0131be04806a2c59",
+      "validation": "5e123333a87b6d13f2ac625869c2b1a2255dea2a00203dd480d1f23d74f55ab9"
+    },
+    "benchmark/c04/seed101": {
+      "train": "fffc19b02e4eab01b65bb005250a455e03814b56b0b8b8ac49cfb311d570a96d",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c04/seed102": {
+      "train": "ecfc3d6eb70848a85cd8c1ad552935ea3548c127180569e4dca13935b6f7b7b3",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c04/seed103": {
+      "train": "b3e499ea1559b8bea5735eb784e108b26185f16673c67343d1947cfe23395433",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c05/seed101": {
+      "train": "4c5e8ae17155e2e0fcac51a86871335db585443d77827be0ed2a5f4e9ae9085b",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c05/seed102": {
+      "train": "479e01970105b3aedcc19a3e1decc35353e42123c556218c54a8be794aa9a802",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c05/seed103": {
+      "train": "903840ca686b91bdabec216a2bdc431a794222fb42e9aeefbdc3703d1ba4cfd8",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c06/seed101": {
+      "train": "97aff34813249c771670ff2e95e0895cbf98d391bef31579aaa75011bbcd586d",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c06/seed102": {
+      "train": "a51826e0e8953fdd87fad9428a3b1b2780b9bc6b5141ab56a7dd8005bc406dc2",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "benchmark/c06/seed103": {
+      "train": "5009f308c59eff67a72d9635d6edc0406527c2625d1a7ea14413de2ed21ff4f4",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "pilot/c00/seed999": {
+      "train": "2ccc48bf08216c86c8817a55eff8a4a9557914749f886bd76ed4c7cb2f3782df",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "pilot/c01/seed999": {
+      "train": "7d6ee7ba4920807290bd2c92bdfba5e937b4904aa652ef93b887cd570ea135e9",
+      "validation": "0bc08670c537a794716b4f18c40e03fdee2f3f6a07e19493eae46d2af88bdd62"
+    },
+    "pilot/c02/seed999": {
+      "train": "60528235ea07299ece1b5cdd86ca526b61913a5b50881ae33859f87e94fba890",
+      "validation": "ff9df06761d109e0a2127b16ec43ab8644bc1da1b5ba6ef405f3363cb4536bd6"
+    },
+    "pilot/c03/seed999": {
+      "train": "db739cfc10b9d80c7912d5dfe0b75d5448f2b7a5432b96d7f6613386cc8455d9",
+      "validation": "52d7cdbe2ee3043a62d7965e8ac59bd7cbaf19dad7213bb4133d6ccb7fa9f7e8"
+    },
+    "pilot/c04/seed999": {
+      "train": "26e5672872b49ef0dd5269a1628e980acbef9faf1affae78215b8666b8d60229",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "pilot/c05/seed999": {
+      "train": "21ba65dc1ec18868d7efc791835fb79c014239ba89ffc18d5860b717610c110a",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    },
+    "pilot/c06/seed999": {
+      "train": "3fa190910df224b9391d6d3ddbd7cffcb99e5482c18c3b263095ed0bda5a4e62",
+      "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+    }
+  }
+}
