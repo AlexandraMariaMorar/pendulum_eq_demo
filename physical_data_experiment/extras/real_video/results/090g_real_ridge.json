@@ -1,0 +1,124 @@
+{
+  "mass": "090g",
+  "source": "real",
+  "sindy_variant": "ridge",
+  "sindy_settings": {
+    "alpha": "0.05*rows",
+    "thresholds": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3
+    ],
+    "max_iter": 20,
+    "unbias": true
+  },
+  "train": "exp2",
+  "test": [
+    "exp3",
+    "exp4"
+  ],
+  "rows_train": 258,
+  "rows_validation": 85,
+  "all_candidates": [
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.0",
+      "expr": "-30.9154*theta**3 + 1.09621*theta**2*v - 1635.37*theta**2 - 0.450694*theta*v**2 + 0.490782*theta*v - 759.967*theta + 0.00382893*v**3 - 0.259669*v**2 - 0.199311*v + 1057.97*sin(theta) - 162.043*sin(2*theta) - 4389.53*cos(theta) + 283.817*cos(2*theta) + 4108.03",
+      "val_err": 0.22033504278157898,
+      "ops": 41
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.001",
+      "expr": "-30.9154*theta**3 + 1.09621*theta**2*v - 1635.37*theta**2 - 0.450694*theta*v**2 + 0.490782*theta*v - 759.967*theta + 0.00382893*v**3 - 0.259669*v**2 - 0.199311*v + 1057.97*sin(theta) - 162.043*sin(2*theta) - 4389.53*cos(theta) + 283.817*cos(2*theta) + 4108.03",
+      "val_err": 0.22033504278157898,
+      "ops": 41
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.003",
+      "expr": "-30.2839*theta**3 + 0.675617*theta**2*v - 1671.07*theta**2 - 0.430654*theta*v**2 + 0.456613*theta*v - 775.237*theta - 0.0107158*v**3 - 0.249266*v**2 + 1078.49*sin(theta) - 164.81*sin(2*theta) - 4486.76*cos(theta) + 290.07*cos(2*theta) + 4198.84",
+      "val_err": 0.197026014952548,
+      "ops": 39
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.01",
+      "expr": "-123.658*theta**3 + 0.676624*theta**2*v - 85.9598*theta**2 - 0.41303*theta*v**2 + 0.457388*theta*v + 97.9239*theta - 0.0107322*v**3 - 0.252038*v**2 + 96.3394*sin(theta) - 110.309*sin(2*theta) - 160.801*cos(theta) + 162.932",
+      "val_err": 0.18636574767574132,
+      "ops": 35
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.03",
+      "expr": "-123.815*theta**3 - 4.23766*theta**2 - 0.259949*theta*v**2 + 101.57*theta + 99.1074*sin(theta) - 114.242*sin(2*theta)",
+      "val_err": 0.1812156827101237,
+      "ops": 18
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.1",
+      "expr": "203.763*theta - 307.257*sin(theta) + 36.8167*sin(2*theta)",
+      "val_err": 0.09036504402347426,
+      "ops": 8
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.3",
+      "expr": "0",
+      "val_err": 12.112419947726487,
+      "ops": 0
+    },
+    {
+      "method": "known form",
+      "setting": "least squares",
+      "expr": "-0.0207748*v - 29.8319*sin(theta)",
+      "val_err": 0.08187652198267546,
+      "ops": 5
+    },
+    {
+      "method": "known form + drag",
+      "setting": "least squares",
+      "expr": "-0.128519*v*Abs(v) + 0.381527*v - 29.837*sin(theta)",
+      "val_err": 0.09413434284040796,
+      "ops": 8
+    }
+  ],
+  "chosen": {
+    "SINDy": {
+      "expr": "203.763*theta - 307.257*sin(theta) + 36.8167*sin(2*theta)",
+      "setting": "threshold 0.1",
+      "val_err": 0.09036504402347426,
+      "test_err": {
+        "exp3": 0.9103708364141759,
+        "exp4": Infinity
+      }
+    },
+    "known form": {
+      "expr": "-0.0207748*v - 29.8319*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.08187652198267546,
+      "test_err": {
+        "exp3": 0.2035437656926586,
+        "exp4": 0.6449371447673715
+      }
+    },
+    "known form + drag": {
+      "expr": "-0.128519*v*Abs(v) + 0.381527*v - 29.837*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.09413434284040796,
+      "test_err": {
+        "exp3": 0.15337642012327216,
+        "exp4": 0.091517993446856
+      }
+    }
+  },
+  "smoothing_floor": {
+    "exp3": 0.0018740083843648994,
+    "exp4": 0.0011444315733752457
+  }
+}
