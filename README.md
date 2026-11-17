@@ -19,7 +19,7 @@ Work in progress . Setup, pipeline and viewer instructions will be added here as
 
 | Area | Owner |
 |---|---|
-| `configs/`, `contracts.py`, `expressions.py`, `evaluate.py`, `run.py`, AI Feynman adapter | Person A |
-| `data.py`, `features.py`, SINDy adapter, `report.py`, `app/viewer.py` | Person B |
+| `configs/`, `contracts.py`, `expressions.py`, `evaluate.py`, `run.py`, AI Feynman adapter | Alex |
+| `data.py`, `features.py`, SINDy adapter, `report.py`, `app/viewer.py` | Stephan |
 
 Work on short task branches (`a/...`, `b/...`) from an up-to-date `main` and merge through reviewed pull requests. Never force-push `main`.
