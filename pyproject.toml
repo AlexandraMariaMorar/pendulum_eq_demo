@@ -11,3 +11,6 @@ dependencies = []
 
 [tool.setuptools.packages.find]
 include = ["pendulum_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
