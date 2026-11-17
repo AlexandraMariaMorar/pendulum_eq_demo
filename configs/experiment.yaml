@@ -84,7 +84,7 @@ evaluation:
   stop_abs_v: 20.0
 
 budgets_seconds:
-  fit: 900
+  fit: 7200   # was 900; raised after the c00 pilot: AI Feynman timed out at 900 s with 0 candidates
   selection: 60
   rollout_per_trajectory: 30
 
