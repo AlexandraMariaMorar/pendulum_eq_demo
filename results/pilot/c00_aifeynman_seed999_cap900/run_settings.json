@@ -1,0 +1,10 @@
+{
+  "threads": 1,
+  "bf_try_time": 30,
+  "ops_file": "14ops.txt",
+  "polyfit_deg": 3,
+  "nn_epochs": 500,
+  "test_percentage": 20,
+  "model_seed": 1185595505,
+  "input_name": "data.txt"
+}

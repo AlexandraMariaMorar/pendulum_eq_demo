@@ -1,13 +1,10 @@
-"""Shared contracts: schema checks, run identifiers and canonical array hashes."""
 from __future__ import annotations
-
+import numpy as np
 import hashlib
 import json
 from pathlib import Path
 
-import numpy as np
-
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 1 
 VALIDATION_ROWS = 200
 TEST_STATES = 501
 TEST_TRAJECTORIES = 4
@@ -25,12 +22,12 @@ RUN_RECORD_KEYS = (
     "fit_status", "evaluation_status",
 )
 
-
 class ContractError(ValueError):
     """Raised when data or records violate the agreed schema."""
 
-
 # ---------- hashing ----------
+#The same input always gives the same hash.
+#Changing even one tiny bit of the input gives a completely different hash.
 
 def hash_array(a: np.ndarray) -> str:
     """SHA-256 of canonical contents: dtype, shape and C-ordered bytes."""
@@ -64,26 +61,39 @@ def hash_file(path) -> str:
 def hash_config(path) -> str:
     return hash_file(path)
 
-
-# ---------- identifiers ----------
-
-def run_id(condition_id: str, method: str, seed: int) -> str:
+# ----------------identifiers--------------
+# The benchmark has 42 planned runs: 7 conditions × 2 methods × 3 seeds
+#Each run needs a unique, predictable name, so the batch runner knows which runs are already done
+#results can be matched to their inputs, and nothing gets mixed up or run twice.
+def run_id(condition_id: str, method:str, seed:int) -> str:  #. this is tehe name of 1 planned run
     if method not in METHODS:
-        raise ContractError(f"unknown method {method!r}")
+        raise ContractError(f"unknown method {method!r}") #without this a typo like sindi would create a run that never matches anything
     return f"{condition_id}_{method}_seed{int(seed)}"
+# example of a run_id(condition,method,seed)
+#c00_aifeynman_seed101
+#c00_aifeynman_seed102
+#c00_aifeynman_seed103
+#c00_sindy_seed101 ...
+#c06_sindy_seed103
+# => its deterministic
+#In one run, the method fits on that condition's training data, one equation is selected from its candidates, and that equation is scored
+#An attempt is one try at doing a run. Usually a run has one attempt (_a1). Only if something crashes does it get a second (_a2).
+def attempt_id(rid: str, attempt: int) ->str: # name of one try at a run
+    if attempt <1:
+        raise ContractError(f"attempt must start at 1, got {attempt}")
+    return f"{rid}_attempt{int(attempt)}"
 
+# we separate attempts from runs because if the computer crasshes during run X, retry it, but keep the record of the faled attempt 
+# c01_aifeynman_seed101 is the run always appears exactly once in the results
+# _attempt1 might be "crashed at 3 minutes", _attempt2 might be the successful retry 
 
-def attempt_id(rid: str, attempt: int) -> str:
-    if attempt < 1:
-        raise ContractError("attempt numbers start at 1")
-    return f"{rid}_a{int(attempt)}"
 
 
 # ---------- dataset checks ----------
 
 def _check_float64(name, a, ndim, shape_tail=None):
-    if a.dtype != np.float64:
-        raise ContractError(f"{name} must be float64, got {a.dtype}")
+    if a.dtype != np.float64: #Type is float64. The experiment requires full precision. With float32 (about 7 digits), SINDy's small coefficients and tiny noise levels like 0.5% would be distorted.
+        raise ContractError(f"{name} must be float64, got {a.dtype}") 
     if a.ndim != ndim:
         raise ContractError(f"{name} must have {ndim} dims, got shape {a.shape}")
     if shape_tail is not None and a.shape[1:] != shape_tail:
@@ -92,10 +102,10 @@ def _check_float64(name, a, ndim, shape_tail=None):
         raise ContractError(f"{name} contains nonfinite values")
 
 
-def check_train(path, expected_rows=None, is_validation=False):
+def check_train(path, expected_rows=None, is_validation=False): #validates the whole data file
     """Validate a train.npz / validation.npz file. Returns (X, y)."""
     with np.load(path) as z:
-        missing = [k for k in TRAIN_KEYS if k not in z.files]
+        missing = [k for k in TRAIN_KEYS if k not in z.files] #checks if one of the required keys arent in the file 
         if missing:
             raise ContractError(f"{path}: missing keys {missing}")
         d = {k: z[k] for k in TRAIN_KEYS}
@@ -111,10 +121,9 @@ def check_train(path, expected_rows=None, is_validation=False):
         raise ContractError(f"validation must have {VALIDATION_ROWS} rows, got {n}")
     if expected_rows is not None and n != expected_rows:
         raise ContractError(f"expected {expected_rows} rows, got {n}")
-    return d["X"], d["y"]
+    return d["X"], d["y"] # if everythig is passed we return 2 arrays the mehods actuallyuse
 
-
-def check_test(path):
+def check_test(path): # validates the hidden test file 
     """Validate test.npz. Only the evaluator should call this."""
     with np.load(path) as z:
         missing = [k for k in TEST_KEYS if k not in z.files]
@@ -129,15 +138,17 @@ def check_test(path):
     return t, X, acc
 
 
-def check_training_file_has_no_test_labels(path):
+def check_training_file_has_no_test_labels(path): #anti cheating guard 
     """Adapter-side guard: training files must not carry test arrays."""
     with np.load(path) as z:
         extra = [k for k in z.files if k in ("acceleration", "clean_acceleration")]
     if extra:
         raise ContractError(f"{path}: contains clean-label keys {extra}")
 
-
 # ---------- JSON records ----------
+# checking the method outputs
+# candidates.json lists every equation the method proposes. SINDy gives 6 (one per threshold), and AI Feynman gives its list of formulas.
+# fit_status.json says how the fit went
 
 def check_candidates(obj):
     """Validate the content of candidates.json (a list of candidate dicts)."""
@@ -164,8 +175,7 @@ def check_fit_status(obj):
         raise ContractError(f"bad fit status {obj['status']!r}")
     return obj
 
-
-def check_run_record(rec):
+def check_run_record(rec): #the final record of one run
     missing = [k for k in RUN_RECORD_KEYS if k not in rec]
     if missing:
         raise ContractError(f"run record missing keys {missing}")
@@ -173,7 +183,8 @@ def check_run_record(rec):
         raise ContractError("schema_version mismatch")
     _no_nan(rec)
     return rec
-
+"""After a run finishes (fit, then selection, then evaluation), the batch runner writes one record. 
+It's the single source for every number in the final results table."""
 
 def _no_nan(x, path="record"):
     if isinstance(x, float) and not np.isfinite(x):
@@ -193,3 +204,4 @@ def write_json_atomic(path, obj):
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(obj, indent=2, allow_nan=False))
     tmp.replace(path)
+

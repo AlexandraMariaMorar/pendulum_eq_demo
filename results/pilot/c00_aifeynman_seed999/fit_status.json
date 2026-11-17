@@ -1,0 +1,34 @@
+{
+  "method": "aifeynman",
+  "status": "ok",
+  "fit_time": 1764.427,
+  "message": "19 candidates",
+  "settings": {
+    "threads": 1,
+    "bf_try_time": 30,
+    "ops_file": "14ops.txt",
+    "polyfit_deg": 3,
+    "nn_epochs": 500,
+    "test_percentage": 20,
+    "model_seed": 1185595505,
+    "input_name": "data.txt"
+  },
+  "python_path": ".venv-aifeynman/bin/python",
+  "budget_seconds": 7200,
+  "input": {
+    "input_file": "input/data.txt",
+    "columns": [
+      "theta",
+      "v",
+      "y"
+    ],
+    "variable_map": {
+      "x0": "theta",
+      "x1": "v"
+    },
+    "rows": 1200,
+    "train_hash": "2ccc48bf08216c86c8817a55eff8a4a9557914749f886bd76ed4c7cb2f3782df"
+  },
+  "returncode": 0,
+  "timed_out": false
+}
