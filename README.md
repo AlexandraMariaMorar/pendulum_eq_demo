@@ -13,7 +13,7 @@ Both methods learn only the acceleration `v_dot` from `(theta, v)`. The experime
 
 ## Status
 
-Work in progress (4-day plan). Setup, pipeline and viewer instructions will be added here as the components are merged.
+Work in progress . Setup, pipeline and viewer instructions will be added here as the components are merged.
 
 ## Ownership
 
