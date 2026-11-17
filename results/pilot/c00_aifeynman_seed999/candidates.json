@@ -1,0 +1,553 @@
+[
+  {
+    "candidate_id": "aifeynman_row0",
+    "raw_expression": "atan(666.000000000000+(sin(pi))**(-1))",
+    "expression": "atan(666.000000000000+(sin(pi))**(-1))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 0,
+      "solution_columns": {
+        "test_error": "1000000.0",
+        "mean_log2_error": "19.931568569324174",
+        "total_log2_error": "23917.88228318901",
+        "complexity_bits": "10.0",
+        "error": "1000000"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row1",
+    "raw_expression": "1/(-0.588983545323+(-sin((x0-1))))",
+    "expression": "1/(-0.588983545323+(-sin((theta-1))))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 1,
+      "solution_columns": {
+        "test_error": "31.015671386498198",
+        "mean_log2_error": "5.001296997413649",
+        "total_log2_error": "6001.55639689638",
+        "complexity_bits": "39.97604780611832",
+        "error": "32.0287812585975"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row2",
+    "raw_expression": "(tan(-3.194926106540+pi))+(cos(-1.570796414218+pi))",
+    "expression": "(tan(-3.194926106540+pi))+(cos(-1.570796414218+pi))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 2,
+      "solution_columns": {
+        "test_error": "30.389491193156022",
+        "mean_log2_error": "4.9260808968163365",
+        "total_log2_error": "5911.297076179604",
+        "complexity_bits": "42.27954431440306",
+        "error": "30.401716931841385"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row3",
+    "raw_expression": "(tan(-3.194926106540+pi))+(cos(2.570796326795+cos(pi)))",
+    "expression": "(tan(-3.194926106540+pi))+(cos(2.570796326795+cos(pi)))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 3,
+      "solution_columns": {
+        "test_error": "30.389491157158133",
+        "mean_log2_error": "4.926080895688577",
+        "total_log2_error": "5911.297074826292",
+        "complexity_bits": "42.27954667700129",
+        "error": "30.401716908076263"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row4",
+    "raw_expression": "(tan(-3.194926106540+pi))+(tan(0.999568730619+cos(pi)))",
+    "expression": "(tan(-3.194926106540+pi))+(tan(0.999568730619+cos(pi)))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 4,
+      "solution_columns": {
+        "test_error": "30.38929493426713",
+        "mean_log2_error": "4.926074480596383",
+        "total_log2_error": "5911.289376715659",
+        "complexity_bits": "42.29115482846008",
+        "error": "30.40158172400915"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row5",
+    "raw_expression": "tan(-3.207089796146+pi)",
+    "expression": "tan(-3.207089796146+pi)",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 5,
+      "solution_columns": {
+        "test_error": "30.36720514428215",
+        "mean_log2_error": "4.890348568686757",
+        "total_log2_error": "5868.418282424108",
+        "complexity_bits": "42.57663416783185",
+        "error": "29.65798276241097"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row6",
+    "raw_expression": "asin(-0.015830614321*pi)",
+    "expression": "asin(-0.015830614321*pi)",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 6,
+      "solution_columns": {
+        "test_error": "30.389893040130314",
+        "mean_log2_error": "4.855608564487179",
+        "total_log2_error": "5826.730277384615",
+        "complexity_bits": "48.28074188243117",
+        "error": "28.952350324665463"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row7",
+    "raw_expression": "asin(-0.017674803843+(-x0))",
+    "expression": "asin(-0.017674803843+(-theta))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 7,
+      "solution_columns": {
+        "test_error": "29.73300880788824",
+        "mean_log2_error": "4.832436223395891",
+        "total_log2_error": "5798.923468075069",
+        "complexity_bits": "49.68483134257686",
+        "error": "28.491036911643985"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row8",
+    "raw_expression": "(-0.003588618025+(x0*((-pi)-1)))+(cos(-1.570796414218+pi))",
+    "expression": "(-0.003588618025+(theta*((-pi)-1)))+(cos(-1.570796414218+pi))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 8,
+      "solution_columns": {
+        "test_error": "27.936897942484695",
+        "mean_log2_error": "4.8085179605162685",
+        "total_log2_error": "5770.221552619522",
+        "complexity_bits": "50.38460226738739",
+        "error": "28.02258149208724"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row9",
+    "raw_expression": "(-0.003588618025+(x0*((-pi)-1)))+(cos(2.570796326795+cos(pi)))",
+    "expression": "(-0.003588618025+(theta*((-pi)-1)))+(cos(2.570796326795+cos(pi)))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 9,
+      "solution_columns": {
+        "test_error": "27.936898342875914",
+        "mean_log2_error": "4.808517958908586",
+        "total_log2_error": "5770.221550690303",
+        "complexity_bits": "50.3846374136644",
+        "error": "28.02258146085997"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row10",
+    "raw_expression": "(-0.003588618025+(x0*((-pi)-1)))+(tan(0.999568730619+cos(pi)))",
+    "expression": "(-0.003588618025+(theta*((-pi)-1)))+(tan(0.999568730619+cos(pi)))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 10,
+      "solution_columns": {
+        "test_error": "27.938365002695758",
+        "mean_log2_error": "4.808433086656747",
+        "total_log2_error": "5770.119703988096",
+        "complexity_bits": "50.54836414653216",
+        "error": "28.020932969968083"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row11",
+    "raw_expression": "-0.000786717783+(sin(x0)*((-pi)-1))",
+    "expression": "-0.000786717783+(sin(theta)*((-pi)-1))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 11,
+      "solution_columns": {
+        "test_error": "27.125844790603917",
+        "mean_log2_error": "4.765988561121162",
+        "total_log2_error": "5719.1862733453945",
+        "complexity_bits": "51.80476761801899",
+        "error": "27.208557389265025"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row12",
+    "raw_expression": "(-0.004113827873+(sin(x0)*(((cos(pi)-1)-1)-1)))+(cos(-1.570796414218+pi))",
+    "expression": "(-0.004113827873+(sin(theta)*(((cos(pi)-1)-1)-1)))+(cos(-1.570796414218+pi))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 12,
+      "solution_columns": {
+        "test_error": "27.076669642838986",
+        "mean_log2_error": "4.761304539693707",
+        "total_log2_error": "5713.565447632448",
+        "complexity_bits": "52.51322838520287",
+        "error": "27.12036217384844"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row13",
+    "raw_expression": "(-0.004113827873+(sin(x0)*(((cos(pi)-1)-1)-1)))+(cos(2.570796326795+cos(pi)))",
+    "expression": "(-0.004113827873+(sin(theta)*(((cos(pi)-1)-1)-1)))+(cos(2.570796326795+cos(pi)))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 13,
+      "solution_columns": {
+        "test_error": "27.076669442446807",
+        "mean_log2_error": "4.761304429839113",
+        "total_log2_error": "5713.565315806935",
+        "complexity_bits": "52.513259044328855",
+        "error": "27.12036010875763"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row14",
+    "raw_expression": "-3.942382152695*sin(x0)",
+    "expression": "-3.942382152695*sin(theta)",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 14,
+      "solution_columns": {
+        "test_error": "27.02345944225436",
+        "mean_log2_error": "4.757514475544853",
+        "total_log2_error": "5709.0173706538235",
+        "complexity_bits": "56.48606095845126",
+        "error": "27.04920852599746"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row15",
+    "raw_expression": "-0.004981034404+(x0*(log(cos(cos(x1)))-pi))",
+    "expression": "-0.004981034404+(theta*(log(cos(cos(v)))-pi))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 15,
+      "solution_columns": {
+        "test_error": "27.009125617484447",
+        "mean_log2_error": "4.755115794320456",
+        "total_log2_error": "5706.138953184547",
+        "complexity_bits": "57.36742942382614",
+        "error": "27.00427281981064"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row16",
+    "raw_expression": "(-0.004113827873+(sin(x0)*(((cos(pi)-1)-1)-1)))+(0.006649838897+(x1/(-pi)))",
+    "expression": "(-0.004113827873+(sin(theta)*(((cos(pi)-1)-1)-1)))+(0.006649838897+(v/(-pi)))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 16,
+      "solution_columns": {
+        "test_error": "26.318638453004986",
+        "mean_log2_error": "4.720468831066121",
+        "total_log2_error": "5664.562597279345",
+        "complexity_bits": "59.715473159838865",
+        "error": "26.3634784720915"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row17",
+    "raw_expression": "(-0.004113827873+(sin(x0)*(((cos(pi)-1)-1)-1)))+(0.005074729251+(x1*log(cos(cos(sin(exp(pi)))))))",
+    "expression": "(-0.004113827873+(sin(theta)*(((cos(pi)-1)-1)-1)))+(0.005074729251+(v*log(cos(cos(sin(exp(pi)))))))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 17,
+      "solution_columns": {
+        "test_error": "19.965732867499142",
+        "mean_log2_error": "4.319752816366916",
+        "total_log2_error": "5183.703379640298",
+        "complexity_bits": "69.33492242450295",
+        "error": "19.969866959362314"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  },
+  {
+    "candidate_id": "aifeynman_row18",
+    "raw_expression": "(-0.004113827873+(sin(x0)*(((cos(pi)-1)-1)-1)))+(-0.994900648150+((x1*cos(sqrt(pi)))+1))",
+    "expression": "(-0.004113827873+(sin(theta)*(((cos(pi)-1)-1)-1)))+(-0.994900648150+((v*cos(sqrt(pi)))+1))",
+    "method_settings": {
+      "threads": 1,
+      "bf_try_time": 30,
+      "ops_file": "14ops.txt",
+      "polyfit_deg": 3,
+      "nn_epochs": 500,
+      "test_percentage": 20,
+      "model_seed": 1185595505,
+      "input_name": "data.txt"
+    },
+    "diagnostics": {
+      "solution_row": 18,
+      "solution_columns": {
+        "test_error": "19.891514311687118",
+        "mean_log2_error": "4.3149797077614",
+        "total_log2_error": "5177.97564931368",
+        "complexity_bits": "71.37142502803916",
+        "error": "19.903906492251153"
+      },
+      "variable_map": {
+        "x0": "theta",
+        "x1": "v"
+      }
+    }
+  }
+]
