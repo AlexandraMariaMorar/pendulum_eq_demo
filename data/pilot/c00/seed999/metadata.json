@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "generator_version": 1,
+  "experiment_id": "pendulum-v1",
+  "condition_id": "c00",
+  "seed": 999,
+  "n": 1200,
+  "noise_r": 0.0,
+  "noise_model": "y = clean + r * s * eps, eps ~ N(0,1) per row, fixed per seed",
+  "scale_s": 2.100037691603694,
+  "scale_ddof": 0,
+  "validation_rows": 200,
+  "validation_index_rule": "arange(0, 500, 5) per validation trajectory",
+  "random_streams": {
+    "subsample": 0,
+    "noise_train": 1,
+    "noise_val": 2,
+    "model": 3
+  },
+  "model_seed": 1185595505,
+  "config_hash": "cf6e01f7e3363b223420d2316fb4e5c3fa1cbd38516339f63d54939af219c654",
+  "hashes": {
+    "train": "2ccc48bf08216c86c8817a55eff8a4a9557914749f886bd76ed4c7cb2f3782df",
+    "validation": "ab5af52332e8c2a5ac770d96a9b52d1899c1fd8593249a865bcd185921ed1537"
+  }
+}
