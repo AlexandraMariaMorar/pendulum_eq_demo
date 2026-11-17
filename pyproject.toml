@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "pendulum-lab"
 version = "0.1.0"
 description = "AI Feynman vs SINDy on a damped pendulum"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = []
 
 [tool.setuptools.packages.find]
