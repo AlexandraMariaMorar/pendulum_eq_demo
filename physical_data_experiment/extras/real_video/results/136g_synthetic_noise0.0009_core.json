@@ -1,0 +1,111 @@
+{
+  "mass": "136g",
+  "source": "synthetic_noise0.0009",
+  "sindy_variant": "core",
+  "sindy_settings": {
+    "alpha": 0.0,
+    "thresholds": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "max_iter": 20,
+    "unbias": true
+  },
+  "train": "exp1",
+  "test": [
+    "exp2"
+  ],
+  "rows_train": 273,
+  "rows_validation": 90,
+  "all_candidates": [
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.0",
+      "expr": "2195.66*theta**3 + 0.00401551*theta**2*v - 41.5105*theta**2 - 0.0229471*theta*v**2 + 0.00227143*theta*v - 16914.5*theta - 7.17175e-5*v**3 + 0.00370525*v**2 - 0.0239671*v + 18148.5*sin(theta) - 629.254*sin(2*theta) - 115.742*cos(theta) + 8.24578*cos(2*theta) + 107.442",
+      "val_err": 0.013488696535567599,
+      "ops": 41
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.001",
+      "expr": "2196.24*theta**3 - 41.8845*theta**2 - 0.0229898*theta*v**2 - 16919.0*theta + 0.00372457*v**2 - 0.024163*v + 18153.4*sin(theta) - 629.426*sin(2*theta) - 116.788*cos(theta) + 8.32155*cos(2*theta) + 108.413",
+      "val_err": 0.025061129721924414,
+      "ops": 31
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.003",
+      "expr": "2194.78*theta**3 - 35.1115*theta**2 - 0.023006*theta*v**2 - 16907.7*theta - 0.0241945*v + 18141.2*sin(theta) - 628.985*sin(2*theta) - 97.9209*cos(theta) + 7.02671*cos(2*theta) + 90.9048",
+      "val_err": 0.0197030278022422,
+      "ops": 28
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.01",
+      "expr": "2043.43*theta**3 - 37.9784*theta**2 - 15744.7*theta + 16893.2*sin(theta) - 586.698*sin(2*theta) - 105.93*cos(theta) + 7.6083*cos(2*theta) + 98.339",
+      "val_err": 0.027833896635843715,
+      "ops": 22
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.03",
+      "expr": "2043.43*theta**3 - 37.9784*theta**2 - 15744.7*theta + 16893.2*sin(theta) - 586.698*sin(2*theta) - 105.93*cos(theta) + 7.6083*cos(2*theta) + 98.339",
+      "val_err": 0.027833896635843715,
+      "ops": 22
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.1",
+      "expr": "2043.43*theta**3 - 37.9784*theta**2 - 15744.7*theta + 16893.2*sin(theta) - 586.698*sin(2*theta) - 105.93*cos(theta) + 7.6083*cos(2*theta) + 98.339",
+      "val_err": 0.027833896635843715,
+      "ops": 22
+    },
+    {
+      "method": "known form",
+      "setting": "least squares",
+      "expr": "-0.0243004*v - 24.3054*sin(theta)",
+      "val_err": 0.004655134946266392,
+      "ops": 5
+    },
+    {
+      "method": "known form + drag",
+      "setting": "least squares",
+      "expr": "-0.00366446*v*Abs(v) - 0.0112159*v - 24.3054*sin(theta)",
+      "val_err": 0.00568664640373007,
+      "ops": 9
+    }
+  ],
+  "chosen": {
+    "SINDy": {
+      "expr": "2195.66*theta**3 + 0.00401551*theta**2*v - 41.5105*theta**2 - 0.0229471*theta*v**2 + 0.00227143*theta*v - 16914.5*theta - 7.17175e-5*v**3 + 0.00370525*v**2 - 0.0239671*v + 18148.5*sin(theta) - 629.254*sin(2*theta) - 115.742*cos(theta) + 8.24578*cos(2*theta) + 107.442",
+      "setting": "threshold 0.0",
+      "val_err": 0.013488696535567599,
+      "test_err": {
+        "exp2": Infinity
+      }
+    },
+    "known form": {
+      "expr": "-0.0243004*v - 24.3054*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.004655134946266392,
+      "test_err": {
+        "exp2": 0.01876947754423011
+      }
+    },
+    "known form + drag": {
+      "expr": "-0.00366446*v*Abs(v) - 0.0112159*v - 24.3054*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.00568664640373007,
+      "test_err": {
+        "exp2": 0.04505094254731363
+      }
+    }
+  },
+  "smoothing_floor": {
+    "exp2": 0.0007508985886410849
+  }
+}

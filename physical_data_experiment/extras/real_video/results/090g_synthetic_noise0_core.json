@@ -1,0 +1,116 @@
+{
+  "mass": "090g",
+  "source": "synthetic_noise0",
+  "sindy_variant": "core",
+  "sindy_settings": {
+    "alpha": 0.0,
+    "thresholds": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "max_iter": 20,
+    "unbias": true
+  },
+  "train": "exp2",
+  "test": [
+    "exp3",
+    "exp4"
+  ],
+  "rows_train": 258,
+  "rows_validation": 85,
+  "all_candidates": [
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.0",
+      "expr": "2.02722*theta**3 - 7.79496e-5*theta**2*v - 0.0561658*theta**2 + 0.00237064*theta*v**2 + 4.9586e-7*theta*v - 14.2012*theta + 8.52199e-7*v**3 + 1.67703e-6*v**2 - 0.0207784*v - 15.061*sin(theta) - 0.275784*sin(2*theta) - 0.156294*cos(theta) + 0.0110859*cos(2*theta) + 0.14519",
+      "val_err": 0.00162960407850789,
+      "ops": 41
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.001",
+      "expr": "2.13423*theta**3 - 14.3507*theta - 0.0207756*v - 15.2079*sin(theta) - 0.110196*sin(2*theta)",
+      "val_err": 0.0024850430327379176,
+      "ops": 13
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.003",
+      "expr": "2.13423*theta**3 - 14.3507*theta - 0.0207756*v - 15.2079*sin(theta) - 0.110196*sin(2*theta)",
+      "val_err": 0.0024850430327379176,
+      "ops": 13
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.01",
+      "expr": "1.84974*theta**3 - 14.066*theta - 14.9275*sin(theta) - 0.396923*sin(2*theta)",
+      "val_err": 0.023247170073387557,
+      "ops": 11
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.03",
+      "expr": "1.84974*theta**3 - 14.066*theta - 14.9275*sin(theta) - 0.396923*sin(2*theta)",
+      "val_err": 0.023247170073387557,
+      "ops": 11
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.1",
+      "expr": "-29.822*sin(theta)",
+      "val_err": 0.022884951370740234,
+      "ops": 3
+    },
+    {
+      "method": "known form",
+      "setting": "least squares",
+      "expr": "-0.0207546*v - 29.8216*sin(theta)",
+      "val_err": 0.0017028745141530255,
+      "ops": 5
+    },
+    {
+      "method": "known form + drag",
+      "setting": "least squares",
+      "expr": "4.9624e-5*v*Abs(v) - 0.0209117*v - 29.8216*sin(theta)",
+      "val_err": 0.0016960338874025453,
+      "ops": 8
+    }
+  ],
+  "chosen": {
+    "SINDy": {
+      "expr": "2.13423*theta**3 - 14.3507*theta - 0.0207756*v - 15.2079*sin(theta) - 0.110196*sin(2*theta)",
+      "setting": "threshold 0.001",
+      "val_err": 0.0024850430327379176,
+      "test_err": {
+        "exp3": 0.002015388591002603,
+        "exp4": 0.0038888710038169935
+      }
+    },
+    "known form": {
+      "expr": "-0.0207546*v - 29.8216*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.0017028745141530255,
+      "test_err": {
+        "exp3": 0.002246872981664601,
+        "exp4": 0.0029597313699341386
+      }
+    },
+    "known form + drag": {
+      "expr": "4.9624e-5*v*Abs(v) - 0.0209117*v - 29.8216*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.0016960338874025453,
+      "test_err": {
+        "exp3": 0.0023480426000123985,
+        "exp4": 0.003435909542143137
+      }
+    }
+  },
+  "smoothing_floor": {
+    "exp3": 7.76862915310322e-06,
+    "exp4": 1.0006905973315308e-05
+  }
+}

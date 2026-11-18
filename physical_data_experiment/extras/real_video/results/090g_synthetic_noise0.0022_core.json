@@ -1,0 +1,116 @@
+{
+  "mass": "090g",
+  "source": "synthetic_noise0.0022",
+  "sindy_variant": "core",
+  "sindy_settings": {
+    "alpha": 0.0,
+    "thresholds": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "max_iter": 20,
+    "unbias": true
+  },
+  "train": "exp2",
+  "test": [
+    "exp3",
+    "exp4"
+  ],
+  "rows_train": 258,
+  "rows_validation": 85,
+  "all_candidates": [
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.0",
+      "expr": "47.3568*theta**3 - 0.367111*theta**2*v - 4433.01*theta**2 - 0.164324*theta*v**2 - 0.0266865*theta*v - 160.419*theta - 0.0140044*v**3 + 0.0304067*v**2 + 0.172362*v + 72.9948*sin(theta) + 30.3074*sin(2*theta) - 12152.1*cos(theta) + 825.72*cos(2*theta) + 11326.2",
+      "val_err": 0.056839734891776864,
+      "ops": 41
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.001",
+      "expr": "47.3568*theta**3 - 0.367111*theta**2*v - 4433.01*theta**2 - 0.164324*theta*v**2 - 0.0266865*theta*v - 160.419*theta - 0.0140044*v**3 + 0.0304067*v**2 + 0.172362*v + 72.9948*sin(theta) + 30.3074*sin(2*theta) - 12152.1*cos(theta) + 825.72*cos(2*theta) + 11326.2",
+      "val_err": 0.056839734891776864,
+      "ops": 41
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.003",
+      "expr": "47.4591*theta**3 - 0.35021*theta**2*v - 4430.41*theta**2 - 0.165184*theta*v**2 - 160.483*theta - 0.0134399*v**3 + 0.0299516*v**2 + 0.164534*v + 72.8041*sin(theta) + 30.4418*sin(2*theta) - 12144.9*cos(theta) + 825.24*cos(2*theta) + 11319.5",
+      "val_err": 0.056799833602053755,
+      "ops": 38
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.01",
+      "expr": "47.4591*theta**3 - 0.35021*theta**2*v - 4430.41*theta**2 - 0.165184*theta*v**2 - 160.483*theta - 0.0134399*v**3 + 0.0299516*v**2 + 0.164534*v + 72.8041*sin(theta) + 30.4418*sin(2*theta) - 12144.9*cos(theta) + 825.24*cos(2*theta) + 11319.5",
+      "val_err": 0.056799833602053755,
+      "ops": 38
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.03",
+      "expr": "47.5461*theta**3 - 4267.97*theta**2 - 0.168335*theta*v**2 - 158.358*theta + 69.5618*sin(theta) + 31.0212*sin(2*theta) - 11700.2*cos(theta) + 795.634*cos(2*theta) + 10904.9",
+      "val_err": 0.055162836721224656,
+      "ops": 26
+    },
+    {
+      "method": "SINDy",
+      "setting": "threshold 0.1",
+      "expr": "38.8458*theta**3 - 4313.25*theta**2 - 134.838*theta + 64.8302*sin(theta) + 20.3955*sin(2*theta) - 11823.2*cos(theta) + 803.729*cos(2*theta) + 11019.8",
+      "val_err": 0.02404969321747607,
+      "ops": 22
+    },
+    {
+      "method": "known form",
+      "setting": "least squares",
+      "expr": "-0.018502*v - 29.822*sin(theta)",
+      "val_err": 0.005820839818763222,
+      "ops": 5
+    },
+    {
+      "method": "known form + drag",
+      "setting": "least squares",
+      "expr": "0.0020498*v*Abs(v) - 0.0250026*v - 29.822*sin(theta)",
+      "val_err": 0.005628464753032252,
+      "ops": 8
+    }
+  ],
+  "chosen": {
+    "SINDy": {
+      "expr": "38.8458*theta**3 - 4313.25*theta**2 - 134.838*theta + 64.8302*sin(theta) + 20.3955*sin(2*theta) - 11823.2*cos(theta) + 803.729*cos(2*theta) + 11019.8",
+      "setting": "threshold 0.1",
+      "val_err": 0.02404969321747607,
+      "test_err": {
+        "exp3": Infinity,
+        "exp4": Infinity
+      }
+    },
+    "known form": {
+      "expr": "-0.018502*v - 29.822*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.005820839818763222,
+      "test_err": {
+        "exp3": 0.06542342576097272,
+        "exp4": 0.036029764420394204
+      }
+    },
+    "known form + drag": {
+      "expr": "0.0020498*v*Abs(v) - 0.0250026*v - 29.822*sin(theta)",
+      "setting": "least squares",
+      "val_err": 0.005628464753032252,
+      "test_err": {
+        "exp3": 0.07135373574369644,
+        "exp4": 0.05804551564582422
+      }
+    }
+  },
+  "smoothing_floor": {
+    "exp3": 0.002266180496156117,
+    "exp4": 0.0015733964996167433
+  }
+}
